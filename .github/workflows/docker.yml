@@ -26,4 +26,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: aveline/bgptools-ixpmac:latest
+          tags: |
+            aveline/bgptools-ixpmac:latest
+            aveline/bgptools-ixpmac:${{ github.sha }}
+            aveline/bgptools-ixpmac:${{ github.run_number }}
